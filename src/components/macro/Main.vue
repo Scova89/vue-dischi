@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/partials/variables.scss';
+@import '../../assets/style/partials/variables.scss';
 
     main{
         height: 100vh;
