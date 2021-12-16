@@ -10,11 +10,28 @@
 </template>
 
 <script>
+import axios from 'axios';
 import DiscCard from '../commons/DiscCard.vue';
 export default {
     name: 'DiscList',
     components:{
         DiscCard
+    },
+    data() {
+        return{
+            albums: null
+        }
+    },
+    created() {
+        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+        .then(function (response) {
+            // handle success
+            console.log(response);
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        });
     }
 }
 </script>
