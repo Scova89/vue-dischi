@@ -1,13 +1,17 @@
 <template>
   <main>
-      
+      <DiscList/>
   </main>
 
 </template>
 
 <script>
+import DiscList from '../section/DiscList.vue';
 export default {
-    name: 'Main'
+    name: 'Main',
+    components:{
+        DiscList,
+    }
 }
 </script>
 
@@ -17,6 +21,9 @@ export default {
     main{
         height: 100vh;
         background-color: $secondaryColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 </style>
