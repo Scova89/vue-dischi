@@ -1,21 +1,24 @@
 <template>
-    <div class="info">
-         <img src="https:\/\/www.onstageweb.com\/wp-content\/uploads\/2018\/09\/bon-jovi-new-jersey.jpg" alt="">
-         <h3>rrerggfgf</h3>
-         <p>sshsgg</p>
-         <p>1231</p>
+    <div class="card">
+         <img :src="info.poster" :alt="info.title">
+         <h3>{{info.title}}</h3>
+         <p>{{info.author}}</p>
+         <p>{{info.year}}</p>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'DiscCard'
+    name: 'DiscCard',
+    props: {
+        info: Object
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 
-    .info{
+    .card{
 
         h3{
             text-transform: uppercase;
