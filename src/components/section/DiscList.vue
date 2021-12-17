@@ -48,9 +48,10 @@ export default {
         .box{
             text-align: center;
             width: 150px;
-            height: 250px;
+            height: 300px;
             background-color: $mainColor;
             margin: 30px;
+            
         }
     }
     

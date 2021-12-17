@@ -19,6 +19,7 @@ export default {
 <style lang="scss" scoped>
 
     .card{
+        
 
         h3{
             text-transform: uppercase;
@@ -28,6 +29,7 @@ export default {
 
         p{
             color: rgba(255, 255, 255, 0.397);
+            
         }
 
         img{
