@@ -4,7 +4,7 @@
             <SearchBar @search="searchAlbums"/>
         </div>
         <div class="card-container">
-                <div class="box" v-for="(album, index) in albums" :key="index">
+                <div class="box" v-for="(album, index) in albumsFiltered" :key="index">
                     <DiscCard :info="album"/>
                 </div>
         </div>
@@ -25,7 +25,8 @@ export default {
     },
     data() {
         return{
-            albums: null
+            albums: null,
+            albumsFiltered: null
         }
     },
     created() {
@@ -33,6 +34,8 @@ export default {
         .then((response) => {
             // handle success
             this.albums = response.data.response;
+            this.albumsFiltered = response.data.response;
+
         })
         .catch(function (error) {
             // handle error
@@ -41,7 +44,9 @@ export default {
     },
     methods: {
         searchAlbums(payload){
-            console.log(payload)
+            this.albumsFiltered = this.albums.filter((elm)=>{
+                return elm.title.toLowerCase().includes(payload.toLowerCase())
+            });
         }
     }
 }
