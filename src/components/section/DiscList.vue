@@ -1,25 +1,27 @@
 <template>
-
-  <div class="card-container">
-        
-        <div class="box" v-for="(album, index) in albums" :key="index">
-            <DiscCard :info="album"/>
+    <div class="container">
+        <div class="search-container">
+            <SearchBar @search="searchAlbums"/>
         </div>
-        
-      
-  </div>
+        <div class="card-container">
+                <div class="box" v-for="(album, index) in albums" :key="index">
+                    <DiscCard :info="album"/>
+                </div>
+        </div>
+    </div>
+  
 </template>
 
 <script>
 import axios from 'axios';
 import DiscCard from '../commons/DiscCard.vue';
-
+import SearchBar from '../commons/SearchBar.vue';
 
 export default {
     name: 'DiscList',
     components:{
         DiscCard,
-        
+        SearchBar
     },
     data() {
         return{
@@ -36,29 +38,41 @@ export default {
             // handle error
             console.log(error);
         });
+    },
+    methods: {
+        searchAlbums(payload){
+            console.log(payload)
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
     @import '../../assets/style/partials/variables.scss';
-    
-    .card-container{
+    .container{
+        .search-container{
+            text-align: center;
+            margin: 30px 0;
+        }
+
+
+        .card-container{
         width: 80%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        margin: 0 auto;
+        
 
-
-        .box{
-            text-align: center;
-            width: 150px;
-            height: 300px;
-            background-color: $mainColor;
-            margin: 30px;
-            
+            .box{
+                text-align: center;
+                width: 150px;
+                height: 300px;
+                background-color: $mainColor;
+                margin: 30px;
+            }
         }
     }
+    
     
     
 </style>

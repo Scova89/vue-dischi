@@ -2,25 +2,16 @@
   <header>
       
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png" alt="logo spotify">
-      <div class="search-container">
-            <SearchBar @search="searchAlbums"/>
-      </div>
+      
   </header>
 
 </template>
 
 <script>
-import SearchBar from '../commons/SearchBar.vue';
+
 export default {
     name: 'Header',
-    components:{
-        SearchBar
-    },
-    methods: {
-        searchAlbums(){
-
-        }
-    }
+    
 }
 </script>
 
@@ -33,7 +24,7 @@ export default {
         background-color: $mainColor;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        
         padding: 0 20px;
 
         img{
@@ -41,10 +32,7 @@ export default {
             padding: 10px 0;
         }
 
-        .search-container{
-            display: flex;
-            justify-content: center;
-        }
+        
     }
 
 </style>
