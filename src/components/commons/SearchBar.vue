@@ -1,8 +1,8 @@
 <template>
     <div class="search-bar">
         <form action="">
-            <input type="text" placeholder="Search album">
-            <button>Search</button>
+            <input type="text" placeholder="Search album" v-model="searchText">
+            <button @click.prevent="$emit('search', searchText)">Search</button>
             <button>Reset</button>
 
         </form>
@@ -11,7 +11,12 @@
 
 <script>
 export default {
-    name: 'SearchBar'
+    name: 'SearchBar',
+    data() {
+        return {
+            searchText: ''
+        }
+    }
 }
 </script>
 
