@@ -1,6 +1,7 @@
 <template>
 
   <div class="card-container">
+        
         <div class="box" v-for="(album, index) in albums" :key="index">
             <DiscCard :info="album"/>
         </div>
@@ -12,10 +13,13 @@
 <script>
 import axios from 'axios';
 import DiscCard from '../commons/DiscCard.vue';
+
+
 export default {
     name: 'DiscList',
     components:{
-        DiscCard
+        DiscCard,
+        
     },
     data() {
         return{
@@ -40,6 +44,7 @@ export default {
     @import '../../assets/style/partials/variables.scss';
     
     .card-container{
+        width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
