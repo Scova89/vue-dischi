@@ -55,6 +55,10 @@ export default {
 <style lang="scss" scoped>
     @import '../../assets/style/partials/variables.scss';
     .container{
+
+        width: 80%;
+
+
         .search-container{
             text-align: center;
             margin: 30px 0;
@@ -62,7 +66,7 @@ export default {
 
 
         .card-container{
-        width: 80%;
+        justify-content: center;
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;

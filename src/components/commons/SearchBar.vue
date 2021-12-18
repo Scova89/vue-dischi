@@ -3,7 +3,7 @@
         <form action="">
             <input type="text" placeholder="Search album" v-model="searchText">
             <button @click.prevent="$emit('search', searchText)">Search</button>
-            <button>Reset</button>
+            <button @click.prevent="$emit('search', '')">Reset</button>
 
         </form>
     </div>
