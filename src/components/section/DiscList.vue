@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
     @import '../../assets/style/partials/variables.scss';
     .container{
-
+    
         width: 80%;
 
 
@@ -66,10 +66,11 @@ export default {
 
 
         .card-container{
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
+            
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
         
 
             .box{

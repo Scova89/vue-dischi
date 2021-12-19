@@ -19,6 +19,7 @@ export default {
 @import '../../assets/style/partials/variables.scss';
 
     main{
+        height: 1000px;
         background-color: $secondaryColor;
         display: flex;
         align-items: flex-start;
